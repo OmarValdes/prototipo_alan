@@ -1,0 +1,160 @@
+<!--Modal Agregar Nuevo --> 
+<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<center><h4 class="modal-title" id="myModalLabel">Agrega Nuevo Producto</h4></center>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+			<div class="container-fluid">
+			<form id="formAdd" method="post" enctype="multipart/form-data">
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Nombre:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="nombre" id="nombre">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Descripcion:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="descripcion" id="descripcion">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Precio:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="precio" id="precio">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Descuento:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="descuento" id="descuento">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Activo:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" name="activo" id="activo">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Imagen:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="file" accept="image/jpg" name="imagen" class="custom-file-input"  id="image" aria-describedby="inputGroupFileAddon01" lang="es">
+                		<label class="custom-file-label" for="image">Selecciona una imagen (.jpg)</label>
+					</div>
+            	</div>  
+        		<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>
+					<button type="submit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</a>
+            	</div>
+			</form>
+			</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<!-- Editar -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            	<center><h4 class="modal-title" id="myModalLabel">Editar Producto</h4></center>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+			<div class="container-fluid">
+			<form id="editForm" method="post" enctype="multipart/from-data">
+				<input type="hidden" class="id" name="id">
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Nombre:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control nombre" name="nombre">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Descripcion:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control descripcion" name="descripcion">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Precio:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="text" class="form-control precio" name="precio">
+					</div>
+				</div>
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Descuento:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="number" class="form-control descuento" name="descuento">
+					</div>
+				</div>
+
+
+				<div class="row form-group">
+					<div class="col-sm-2">
+						<label class="control-label" style="position:relative; top:7px;">Activo:</label>
+					</div>
+					<div class="col-sm-10">
+						<input type="number" class="form-control activo" name="activo">
+					</div>
+				</div>
+
+				
+
+            </div> 
+			</div>
+            <div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-close"></span> Cancelar</button>
+<button type="submit" class="btn btn-success"><span class="fa fa-check"></span> Actualizar</a>
+			</form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminar -->
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Eliminar Producto</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">	
+            	<p class="text-center">¿Esta seguro en eliminar este producto?</p>
+				<h2 class="text-center fullname"></h2>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="fa fa-close"></span> Cancelar</button>
+                <button type="button" class="btn btn-danger id"><span class="fa fa-trash"></span> Si</button>
+            </div>
+
+        </div>
+    </div>
+</div>
